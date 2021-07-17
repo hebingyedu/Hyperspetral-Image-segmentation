@@ -1,0 +1,28 @@
+必须以#开头，否则该行省略，省略掉空格
+类型（暂时只支持python,如果使用的是c的话，可以编译成库用python封装一下)
+#methodtype: python
+主文件
+# mainfile:showRGB
+主函数
+# mainmethod: showRGB
+图标
+#icon:icon.png
+输入 类型，参数定义，名称，默认值(可以没有)
+# input: type="image", name="im", show="输入图像"
+gdal读取时可以设置成all
+# input: type="gdalobject",name="im2",show="选择gdal读取"
+# input: type="bands",name="bands",show="选择多个波段读取"
+
+# input: type="band",name="img_r",show="R"
+# input: type="band",name="img_g",show="G"
+# input: type="band",name="img_b",show="B"
+# input: type="filename", name="file",show="文件",default="./icon.icon"
+# input: type="fold",name="filedir",show="存放目录",default=""
+# input: type="str",name="str",show="文字参数",default="This-is-test-str-input"
+input: type="param_int",name="a",show="分割个数",default="5"
+input: type="param_float",name="b",show="sigma",defalut="0.1"
+#input: type="num",name="a",show="sigma",default="0.1"
+
+输出 上面的换成output.只支持图像输出，以及参数输出，不需要default参数。
+# output: type="image", name="outim", show="输出结果"
+# output: type="param_float",name="result",show="精度"
